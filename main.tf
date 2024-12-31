@@ -649,6 +649,6 @@ removed {
   from = kubernetes_config_map.aws_auth
 
   lifecycle {
-    destroy = true
+    destroy = false
   }
 }
