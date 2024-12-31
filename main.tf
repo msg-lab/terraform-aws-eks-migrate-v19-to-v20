@@ -674,14 +674,14 @@ resource "kubernetes_config_map_v1_data" "aws_auth" {
 }
 
 removed {
-  from = module.eks.kubernetes_config_map_v1_data.aws_auth
+  from = kubernetes_config_map_v1_data.aws_auth
 
   lifecycle {
-    destroy = true
+    destroy = false
   }
 }
 removed {
-  from = module.eks.kubernetes_config_map.aws_auth
+  from = kubernetes_config_map.aws_auth
 
   lifecycle {
     destroy = true
